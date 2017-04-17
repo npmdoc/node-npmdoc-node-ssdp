@@ -1,0 +1,3793 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/diversario/node-ssdp#readme"
+
+    >node-ssdp (v3.2.1)</a>
+</h1>
+<h4>A node.js SSDP client and server library.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp">module node-ssdp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._createSockets">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._createSockets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getHeaders">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getHeaders
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getMethod">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getMethod
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getSSDPHeader
+            <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getStatusCode
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._init">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._init
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._msearch">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._msearch
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._notify">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._notify
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseCommand">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseCommand
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseMessage">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseMessage
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseResponse">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseResponse
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._respondToSearch
+            <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._send">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._send
+            <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._start">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._stop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype.addUSN">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype.addUSN
+            <span class="apidocSignatureSpan">(device)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.search">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.search
+            <span class="apidocSignatureSpan">(serviceType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.start">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._initAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._startAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._stopAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.advertise">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.advertise
+            <span class="apidocSignatureSpan">(alive)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.start">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base">module node-ssdp.Base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.Base">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Base
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.super_">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype">module node-ssdp.Base.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._createSockets">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_createSockets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getHeaders">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getHeaders
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getMethod">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getMethod
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getSSDPHeader
+            <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getStatusCode
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._init">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_init
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._msearch">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_msearch
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._notify">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_notify
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseCommand">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseCommand
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseMessage">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseMessage
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseResponse">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseResponse
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_respondToSearch
+            <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._send">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_send
+            <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._start">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype.addUSN">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>addUSN
+            <span class="apidocSignatureSpan">(device)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._createSockets">module node-ssdp.Base.prototype._createSockets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._createSockets._createSockets">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_createSockets
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._getHeaders">module node-ssdp.Base.prototype._getHeaders</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getHeaders._getHeaders">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getHeaders
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._getMethod">module node-ssdp.Base.prototype._getMethod</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getMethod._getMethod">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getMethod
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._getSSDPHeader">module node-ssdp.Base.prototype._getSSDPHeader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader._getSSDPHeader">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getSSDPHeader
+            <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._getStatusCode">module node-ssdp.Base.prototype._getStatusCode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode._getStatusCode">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getStatusCode
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._init">module node-ssdp.Base.prototype._init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._init._init">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_init
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._msearch">module node-ssdp.Base.prototype._msearch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._msearch._msearch">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_msearch
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._notify">module node-ssdp.Base.prototype._notify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._notify._notify">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_notify
+            <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._parseCommand">module node-ssdp.Base.prototype._parseCommand</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseCommand._parseCommand">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseCommand
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._parseMessage">module node-ssdp.Base.prototype._parseMessage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseMessage._parseMessage">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseMessage
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._parseResponse">module node-ssdp.Base.prototype._parseResponse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._parseResponse._parseResponse">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseResponse
+            <span class="apidocSignatureSpan">(msg, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._respondToSearch">module node-ssdp.Base.prototype._respondToSearch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch._respondToSearch">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_respondToSearch
+            <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._send">module node-ssdp.Base.prototype._send</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._send._send">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_send
+            <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._start">module node-ssdp.Base.prototype._start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._start._start">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype._stop">module node-ssdp.Base.prototype._stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype._stop._stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Base.prototype.addUSN">module node-ssdp.Base.prototype.addUSN</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Base.prototype.addUSN.addUSN">
+            function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>addUSN
+            <span class="apidocSignatureSpan">(device)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Client">module node-ssdp.Client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.Client">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.super_">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.</span>super_
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Client.prototype">module node-ssdp.Client.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.search">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>search
+            <span class="apidocSignatureSpan">(serviceType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.start">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Client.prototype.search">module node-ssdp.Client.prototype.search</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.search.search">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>search
+            <span class="apidocSignatureSpan">(serviceType)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Client.prototype.start">module node-ssdp.Client.prototype.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.start.start">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Client.prototype.stop">module node-ssdp.Client.prototype.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Client.prototype.stop.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server">module node-ssdp.Server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.Server">
+            function <span class="apidocSignatureSpan">node-ssdp.</span>Server
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.super_">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.</span>super_
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype">module node-ssdp.Server.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_initAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_startAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_stopAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.advertise">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>advertise
+            <span class="apidocSignatureSpan">(alive)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.start">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype._initAdLoop">module node-ssdp.Server.prototype._initAdLoop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop._initAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_initAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype._startAdLoop">module node-ssdp.Server.prototype._startAdLoop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop._startAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_startAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype._stopAdLoop">module node-ssdp.Server.prototype._stopAdLoop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop._stopAdLoop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_stopAdLoop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype.advertise">module node-ssdp.Server.prototype.advertise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.advertise.advertise">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>advertise
+            <span class="apidocSignatureSpan">(alive)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype.start">module node-ssdp.Server.prototype.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.start.start">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-ssdp.Server.prototype.stop">module node-ssdp.Server.prototype.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-ssdp.Server.prototype.stop.stop">
+            function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp" id="apidoc.module.node-ssdp">module node-ssdp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base" id="apidoc.element.node-ssdp.Base">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SSDP(opts) {
+  var self = this
+
+  if (!(this instanceof SSDP)) return new SSDP(opts)
+
+  this._subclass = this._subclass || &#x27;ssdp-base&#x27;
+
+  opts = opts || {}
+
+  EE.call(self)
+
+  this._init(opts)
+
+  this._createSockets()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._createSockets" id="apidoc.element.node-ssdp.Base.prototype._createSockets">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._createSockets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._createSockets = function () {
+  var interfaces = os.networkInterfaces()
+    , self = this
+
+  this.sockets = {}
+
+  Object.keys(interfaces).forEach(function (iName) {
+    self._logger(&#x27;discovering all IPs from interface %s&#x27;, iName)
+
+    interfaces[iName].forEach(function (ipInfo) {
+      if (ipInfo.internal == false &#x26;&#x26; ipInfo.family == &#x22;IPv4&#x22;) {
+        self._logger(&#x27;Will use interface %s&#x27;, iName)
+        var socket
+
+        if (parseFloat(process.version.replace(/\w/, &#x27;&#x27;)) &#x3e;= 0.12) {
+          socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self._reuseAddr})
+        } else {
+          socket = dgram.createSocket(&#x27;udp4&#x27;)
+        }
+
+        if (socket) {
+          socket.unref()
+
+          self.sockets[ipInfo.address] = socket
+        }
+      }
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getHeaders" id="apidoc.element.node-ssdp.Base.prototype._getHeaders">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getHeaders
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getHeaders(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+
+  var headers = {}
+
+  lines.forEach(function (line) {
+    if (line.length) {
+      var pairs = line.match(ssdpHeader)
+      if (pairs) headers[pairs[1].toUpperCase()] = pairs[2] // e.g. {&#x27;HOST&#x27;: 239.255.255.250:1900}
+    }
+  })
+
+  return headers
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getMethod" id="apidoc.element.node-ssdp.Base.prototype._getMethod">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getMethod
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getMethod(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , method = (type[0] || &#x27;&#x27;).toLowerCase()
+
+  return method
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader" id="apidoc.element.node-ssdp.Base.prototype._getSSDPHeader">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getSSDPHeader
+        <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._getSSDPHeader = function (method, headers, isResponse) {
+  var message = []
+
+  method = method.toUpperCase()
+
+  if (isResponse) {
+    message.push(&#x27;HTTP/1.1 &#x27; + method)
+  } else {
+    message.push(method + &#x27; * HTTP/1.1&#x27;)
+  }
+
+  Object.keys(headers).forEach(function (header) {
+    message.push(header + &#x27;: &#x27; + headers[header])
+  })
+
+  message.push(&#x27;\r\n&#x27;)
+
+  return message.join(&#x27;\r\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode" id="apidoc.element.node-ssdp.Base.prototype._getStatusCode">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._getStatusCode
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getStatusCode(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , code = parseInt(type[1], 10)
+
+  return code
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._init" id="apidoc.element.node-ssdp.Base.prototype._init">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._init
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._init = function (opts) {
+  this._logger = opts.customLogger || debug(this._subclass)
+
+  this._ssdpSig = opts.ssdpSig || getSsdpSignature()
+
+  this._explicitSocketBind = opts.explicitSocketBind
+  this._reuseAddr = opts.reuseAddr === undefined ? true : opts.reuseAddr
+
+  // User shouldn&#x27;t need to set these
+  this._ssdpIp = opts.ssdpIp || c.SSDP_DEFAULT_IP
+  this._ssdpPort = opts.ssdpPort || c.SSDP_DEFAULT_PORT
+  this._ssdpTtl = opts.ssdpTtl || 4
+
+  // port on which to listen for messages
+  // this generally should be left up to the system
+  this._sourcePort = opts.sourcePort || 0
+
+  this._adInterval = opts.adInterval || 10000
+
+  this._ttl = opts.ttl || 1800
+
+  if (typeof opts.location === &#x27;function&#x27;) {
+    Object.defineProperty(this, &#x27;_location&#x27;, {
+      enumerable: true,
+      get: opts.location
+    })
+  } else {
+    // Probably should specify these
+    this._location = opts.location || &#x27;http://&#x27; + ip.address() + &#x27;:&#x27; + 10293 + &#x27;/upnp/desc.html&#x27;
+  }
+
+  this._ssdpServerHost = this._ssdpIp + &#x27;:&#x27; + this._ssdpPort
+
+  this._usns = {}
+  this._udn = opts.udn || &#x27;uuid:f40c2981-7329-40b7-8b04-27f187aecfb5&#x27;
+
+  this._extraHeaders = opts.headers || {}
+
+  this._allowWildcards = opts.allowWildcards
+
+  this._suppressRootDeviceAdvertisements = opts.suppressRootDeviceAdvertisements
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._msearch" id="apidoc.element.node-ssdp.Base.prototype._msearch">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._msearch
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._msearch = function (headers, msg, rinfo) {
+  this._logger(&#x27;SSDP M-SEARCH event: %o&#x27;, {&#x27;ST&#x27;: headers.ST, &#x27;address&#x27;: rinfo.address, &#x27;port&#x27;: rinfo.port})
+
+  if (!headers.MAN || !headers.MX || !headers.ST) return
+
+  this._respondToSearch(headers.ST, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._notify" id="apidoc.element.node-ssdp.Base.prototype._notify">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._notify
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._notify = function (headers, msg, rinfo) {
+  if (!headers.NTS) {
+    this._logger(&#x27;Missing NTS header: %o&#x27;, headers)
+    return
+  }
+
+  switch (headers.NTS.toLowerCase()) {
+    // Device coming to life.
+
+    case c.SSDP_ALIVE:
+      this.emit(c.ADVERTISE_ALIVE, headers, rinfo)
+      break
+
+    // Device shutting down.
+    case c.SSDP_BYE:
+      this.emit(c.ADVERTISE_BYE, headers, rinfo)
+      break
+
+    default:
+      this._logger(&#x27;Unhandled NOTIFY event: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseCommand" id="apidoc.element.node-ssdp.Base.prototype._parseCommand">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseCommand
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseCommand(msg, rinfo) {
+  var method = this._getMethod(msg)
+    , headers = this._getHeaders(msg)
+
+  switch (method) {
+    case c.NOTIFY:
+      this._notify(headers, msg, rinfo)
+      break
+    case c.M_SEARCH:
+      this._msearch(headers, msg, rinfo)
+      break
+    default:
+      this._logger(&#x27;Unhandled command: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseMessage" id="apidoc.element.node-ssdp.Base.prototype._parseMessage">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseMessage
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._parseMessage = function (msg, rinfo) {
+  msg = msg.toString()
+
+  var type = msg.split(&#x27;\r\n&#x27;).shift()
+
+  // HTTP/#.# ### Response to M-SEARCH
+  if (httpHeader.test(type)) {
+    this._parseResponse(msg, rinfo)
+  } else {
+    this._parseCommand(msg, rinfo)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseResponse" id="apidoc.element.node-ssdp.Base.prototype._parseResponse">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._parseResponse
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseResponse(msg, rinfo) {
+  this._logger(&#x27;SSDP response: %o&#x27;, {&#x27;message&#x27;: msg})
+
+  var headers = this._getHeaders(msg)
+    , statusCode = this._getStatusCode(msg)
+
+  this.emit(&#x27;response&#x27;, headers, statusCode, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch" id="apidoc.element.node-ssdp.Base.prototype._respondToSearch">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._respondToSearch
+        <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._respondToSearch = function (serviceType, rinfo) {
+  var self = this
+    , peer_addr = rinfo.address
+    , peer_port = rinfo.port
+    , stRegex
+    , acceptor
+
+  // unwrap quoted string
+  if (serviceType[0] == &#x27;&#x22;&#x27; &#x26;&#x26; serviceType[serviceType.length - 1] == &#x27;&#x22;&#x27;) {
+    serviceType = serviceType.slice(1, -1)
+  }
+
+  if (self._allowWildcards) {
+    stRegex = new RegExp(serviceType.replace(/\*/g, &#x27;.*&#x27;) + &#x27;$&#x27;)
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || stRegex.test(usn)
+    }
+  } else {
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || usn === serviceType
+    }
+  }
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+
+    if (self._allowWildcards) {
+      udn = udn.replace(stRegex, serviceType)
+    }
+
+    if (acceptor(usn, serviceType)) {
+      var pkt = self._getSSDPHeader(
+        &#x27;200 OK&#x27;, extend({
+          &#x27;ST&#x27;: serviceType === c.SSDP_ALL ? usn : serviceType,
+          &#x27;USN&#x27;: udn,
+          &#x27;LOCATION&#x27;: self._location,
+          &#x27;CACHE-CONTROL&#x27;: &#x27;max-age=&#x27; + self._ttl,
+          &#x27;DATE&#x27;: new Date().toUTCString(),
+          &#x27;SERVER&#x27;: self._ssdpSig,
+          &#x27;EXT&#x27;: &#x27;&#x27;
+        }, self._extraHeaders),
+        true
+      )
+
+      self._logger(&#x27;Sending a 200 OK for an M-SEARCH: %o&#x27;, {&#x27;peer&#x27;: peer_addr, &#x27;port&#x27;: peer_port})
+
+      var message = new Buffer(pkt)
+
+      self._send(message, peer_addr, peer_port, function (err, bytes) {
+        self._logger(&#x27;Sent M-SEARCH response: %o&#x27;, {&#x27;message&#x27;: pkt})
+      })
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._send" id="apidoc.element.node-ssdp.Base.prototype._send">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._send
+        <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._send = function (message, host, port, cb) {
+  var self = this
+
+  if (typeof host === &#x27;function&#x27;) {
+    cb = host
+    host = this._ssdpIp
+    port = this._ssdpPort
+  }
+
+  var ipAddresses = Object.keys(this.sockets)
+
+  async.each(ipAddresses, function (ipAddress, next) {
+    var socket = self.sockets[ipAddress]
+
+    socket.send(message, 0, message.length, port, host, next)
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._start" id="apidoc.element.node-ssdp.Base.prototype._start">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._start = function (cb) {
+  var self = this
+
+  if (self._started) {
+    self._logger(&#x27;Already started.&#x27;)
+    return
+  }
+
+  if (!this.sockets) {
+    this._createSockets()
+  }
+
+  self._started = true
+
+  var interfaces = Object.keys(this.sockets)
+
+  async.each(interfaces, function (iface, next) {
+    var socket = self.sockets[iface]
+
+    socket.on(&#x27;error&#x27;, function onSocketError(err) {
+      self._logger(&#x27;Socker error: %s&#x27;, err.message)
+    })
+
+    socket.on(&#x27;message&#x27;, function onSocketMessage(msg, rinfo) {
+      self._parseMessage(msg, rinfo)
+    })
+
+    socket.on(&#x27;listening&#x27;, function onSocketListening() {
+      var addr = socket.address()
+
+      self._logger(&#x27;SSDP listening: %o&#x27;, {address: &#x27;http://&#x27; + addr.address + &#x27;:&#x27; + addr.port, &#x27;interface&#x27;: iface})
+
+      try {
+        socket.addMembership(self._ssdpIp, iface) // TODO: specifying the interface in there might make a difference
+        socket.setMulticastTTL(self._ssdpTtl)
+      } catch (e) {
+        if (e.code === &#x27;ENODEV&#x27; || e.code === &#x27;EADDRNOTAVAIL&#x27;) {
+          self._logger(&#x27;Interface %s is not present to add multicast group membership. Scheduling a retry. Error: %s&#x27;, addr, e.message
+)
+          setTimeout(addMembership, 5000)
+        } else {
+          throw e
+        }
+      }
+    })
+
+    if (self._explicitSocketBind) {
+      socket.bind(self._sourcePort, iface, next)
+    } else {
+      socket.bind(self._sourcePort, next) // socket binds on 0.0.0.0
+    }
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._stop" id="apidoc.element.node-ssdp.Base.prototype._stop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype._stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype._stop = function () {
+  var self = this
+
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  Object.keys(this.sockets).forEach(function (ipAddress) {
+    var socket = self.sockets[ipAddress]
+
+    socket &#x26;&#x26; socket.close()
+
+    self._logger(&#x27;Stopped socket on %s&#x27;, ipAddress)
+  })
+
+  this.sockets = null
+
+  this._socketBound = this._started = false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype.addUSN" id="apidoc.element.node-ssdp.Base.prototype.addUSN">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base.prototype.addUSN
+        <span class="apidocSignatureSpan">(device)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Base.prototype.addUSN = function (device) {
+  this._usns[device] = this._udn + &#x27;::&#x27; + device
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client" id="apidoc.element.node-ssdp.Client">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SsdpClient(opts) {
+  this._subclass = &#x27;ssdp-client&#x27;
+  SSDP.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.search" id="apidoc.element.node-ssdp.Client.prototype.search">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.search
+        <span class="apidocSignatureSpan">(serviceType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function search(serviceType) {
+  var self = this
+
+  if (!this._started) {
+    return this.start(function () {
+      self.search(serviceType)
+    })
+  }
+
+  var pkt = self._getSSDPHeader(
+    c.M_SEARCH,
+    {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;ST&#x27;: serviceType,
+      &#x27;MAN&#x27;: &#x27;&#x22;ssdp:discover&#x22;&#x27;,
+      &#x27;MX&#x27;: 3
+    }
+  )
+
+  self._logger(&#x27;Sending an M-SEARCH request&#x27;)
+
+  var message = new Buffer(pkt)
+
+  self._send(message, function (err, bytes) {
+    self._logger(&#x27;Sent M-SEARCH request: %o&#x27;, {&#x27;message&#x27;: pkt})
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.start" id="apidoc.element.node-ssdp.Client.prototype.start">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client.prototype.start = function (cb) {
+  var self = this;
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.stop" id="apidoc.element.node-ssdp.Client.prototype.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Client.prototype.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client.prototype.stop = function () {
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server" id="apidoc.element.node-ssdp.Server">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SsdpServer(opts) {
+  this._subclass = &#x27;node-ssdp:server&#x27;
+  SSDP.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop" id="apidoc.element.node-ssdp.Server.prototype._initAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._initAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype._initAdLoop = function () {
+  var self = this
+
+  // Wake up.
+  setTimeout(self.advertise.bind(self), 3000)
+
+  self._startAdLoop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop" id="apidoc.element.node-ssdp.Server.prototype._startAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._startAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype._startAdLoop = function () {
+  assert.equal(this._adLoopInterval, null, &#x27;Attempting to start a parallel ad loop&#x27;)
+
+  this._adLoopInterval = setInterval(this.advertise.bind(this), this._adInterval)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop" id="apidoc.element.node-ssdp.Server.prototype._stopAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype._stopAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype._stopAdLoop = function () {
+  assert.notEqual(this._adLoopInterval, null, &#x27;Attempting to clear a non-existing interval&#x27;)
+
+  clearInterval(this._adLoopInterval)
+  this._adLoopInterval = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.advertise" id="apidoc.element.node-ssdp.Server.prototype.advertise">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.advertise
+        <span class="apidocSignatureSpan">(alive)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype.advertise = function (alive) {
+  var self = this
+
+  if (!this.sockets) return
+  if (alive === undefined) alive = true
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+      , nts = alive ? c.SSDP_ALIVE : c.SSDP_BYE // notification sub-type
+
+    var heads = {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;NT&#x27;: usn, // notification type, in this case same as ST
+      &#x27;NTS&#x27;: nts,
+      &#x27;USN&#x27;: udn
+    }
+
+    if (alive) {
+      heads.LOCATION = self._location
+      heads[&#x27;CACHE-CONTROL&#x27;] = &#x27;max-age=1800&#x27;
+      heads.SERVER = self._ssdpSig // why not include this?
+    }
+
+    extend(heads, self._extraHeaders);
+
+    self._logger(&#x27;Sending an advertisement event&#x27;)
+
+    var message = self._getSSDPHeader(c.NOTIFY, heads)
+
+    self._send(new Buffer(message), function (err, bytes) {
+      self._logger(&#x27;Outgoing server message: %o&#x27;, {&#x27;message&#x27;: message})
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.start" id="apidoc.element.node-ssdp.Server.prototype.start">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype.start = function (cb) {
+  var self = this
+
+  if (self._socketBound) {
+    self._logger(&#x27;Server already running.&#x27;)
+    return
+  }
+
+  self._socketBound = true
+
+  if (!self._suppressRootDeviceAdvertisements) {
+    this._usns[this._udn] = this._udn
+  }
+
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      self._initAdLoop.apply(self, arguments)
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.stop" id="apidoc.element.node-ssdp.Server.prototype.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server.prototype.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server.prototype.stop = function () {
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  this.advertise(false)
+
+  this._stopAdLoop()
+
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base" id="apidoc.module.node-ssdp.Base">module node-ssdp.Base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.Base" id="apidoc.element.node-ssdp.Base.Base">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Base
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SSDP(opts) {
+  var self = this
+
+  if (!(this instanceof SSDP)) return new SSDP(opts)
+
+  this._subclass = this._subclass || &#x27;ssdp-base&#x27;
+
+  opts = opts || {}
+
+  EE.call(self)
+
+  this._init(opts)
+
+  this._createSockets()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.super_" id="apidoc.element.node-ssdp.Base.super_">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype" id="apidoc.module.node-ssdp.Base.prototype">module node-ssdp.Base.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._createSockets" id="apidoc.element.node-ssdp.Base.prototype._createSockets">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_createSockets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createSockets = function () {
+  var interfaces = os.networkInterfaces()
+    , self = this
+
+  this.sockets = {}
+
+  Object.keys(interfaces).forEach(function (iName) {
+    self._logger(&#x27;discovering all IPs from interface %s&#x27;, iName)
+
+    interfaces[iName].forEach(function (ipInfo) {
+      if (ipInfo.internal == false &#x26;&#x26; ipInfo.family == &#x22;IPv4&#x22;) {
+        self._logger(&#x27;Will use interface %s&#x27;, iName)
+        var socket
+
+        if (parseFloat(process.version.replace(/\w/, &#x27;&#x27;)) &#x3e;= 0.12) {
+          socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self._reuseAddr})
+        } else {
+          socket = dgram.createSocket(&#x27;udp4&#x27;)
+        }
+
+        if (socket) {
+          socket.unref()
+
+          self.sockets[ipInfo.address] = socket
+        }
+      }
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getHeaders" id="apidoc.element.node-ssdp.Base.prototype._getHeaders">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getHeaders
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getHeaders(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+
+  var headers = {}
+
+  lines.forEach(function (line) {
+    if (line.length) {
+      var pairs = line.match(ssdpHeader)
+      if (pairs) headers[pairs[1].toUpperCase()] = pairs[2] // e.g. {&#x27;HOST&#x27;: 239.255.255.250:1900}
+    }
+  })
+
+  return headers
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getMethod" id="apidoc.element.node-ssdp.Base.prototype._getMethod">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getMethod
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getMethod(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , method = (type[0] || &#x27;&#x27;).toLowerCase()
+
+  return method
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader" id="apidoc.element.node-ssdp.Base.prototype._getSSDPHeader">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getSSDPHeader
+        <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getSSDPHeader = function (method, headers, isResponse) {
+  var message = []
+
+  method = method.toUpperCase()
+
+  if (isResponse) {
+    message.push(&#x27;HTTP/1.1 &#x27; + method)
+  } else {
+    message.push(method + &#x27; * HTTP/1.1&#x27;)
+  }
+
+  Object.keys(headers).forEach(function (header) {
+    message.push(header + &#x27;: &#x27; + headers[header])
+  })
+
+  message.push(&#x27;\r\n&#x27;)
+
+  return message.join(&#x27;\r\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode" id="apidoc.element.node-ssdp.Base.prototype._getStatusCode">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getStatusCode
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getStatusCode(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , code = parseInt(type[1], 10)
+
+  return code
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._init" id="apidoc.element.node-ssdp.Base.prototype._init">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_init
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_init = function (opts) {
+  this._logger = opts.customLogger || debug(this._subclass)
+
+  this._ssdpSig = opts.ssdpSig || getSsdpSignature()
+
+  this._explicitSocketBind = opts.explicitSocketBind
+  this._reuseAddr = opts.reuseAddr === undefined ? true : opts.reuseAddr
+
+  // User shouldn&#x27;t need to set these
+  this._ssdpIp = opts.ssdpIp || c.SSDP_DEFAULT_IP
+  this._ssdpPort = opts.ssdpPort || c.SSDP_DEFAULT_PORT
+  this._ssdpTtl = opts.ssdpTtl || 4
+
+  // port on which to listen for messages
+  // this generally should be left up to the system
+  this._sourcePort = opts.sourcePort || 0
+
+  this._adInterval = opts.adInterval || 10000
+
+  this._ttl = opts.ttl || 1800
+
+  if (typeof opts.location === &#x27;function&#x27;) {
+    Object.defineProperty(this, &#x27;_location&#x27;, {
+      enumerable: true,
+      get: opts.location
+    })
+  } else {
+    // Probably should specify these
+    this._location = opts.location || &#x27;http://&#x27; + ip.address() + &#x27;:&#x27; + 10293 + &#x27;/upnp/desc.html&#x27;
+  }
+
+  this._ssdpServerHost = this._ssdpIp + &#x27;:&#x27; + this._ssdpPort
+
+  this._usns = {}
+  this._udn = opts.udn || &#x27;uuid:f40c2981-7329-40b7-8b04-27f187aecfb5&#x27;
+
+  this._extraHeaders = opts.headers || {}
+
+  this._allowWildcards = opts.allowWildcards
+
+  this._suppressRootDeviceAdvertisements = opts.suppressRootDeviceAdvertisements
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._msearch" id="apidoc.element.node-ssdp.Base.prototype._msearch">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_msearch
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_msearch = function (headers, msg, rinfo) {
+  this._logger(&#x27;SSDP M-SEARCH event: %o&#x27;, {&#x27;ST&#x27;: headers.ST, &#x27;address&#x27;: rinfo.address, &#x27;port&#x27;: rinfo.port})
+
+  if (!headers.MAN || !headers.MX || !headers.ST) return
+
+  this._respondToSearch(headers.ST, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._notify" id="apidoc.element.node-ssdp.Base.prototype._notify">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_notify
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_notify = function (headers, msg, rinfo) {
+  if (!headers.NTS) {
+    this._logger(&#x27;Missing NTS header: %o&#x27;, headers)
+    return
+  }
+
+  switch (headers.NTS.toLowerCase()) {
+    // Device coming to life.
+
+    case c.SSDP_ALIVE:
+      this.emit(c.ADVERTISE_ALIVE, headers, rinfo)
+      break
+
+    // Device shutting down.
+    case c.SSDP_BYE:
+      this.emit(c.ADVERTISE_BYE, headers, rinfo)
+      break
+
+    default:
+      this._logger(&#x27;Unhandled NOTIFY event: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseCommand" id="apidoc.element.node-ssdp.Base.prototype._parseCommand">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseCommand
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseCommand(msg, rinfo) {
+  var method = this._getMethod(msg)
+    , headers = this._getHeaders(msg)
+
+  switch (method) {
+    case c.NOTIFY:
+      this._notify(headers, msg, rinfo)
+      break
+    case c.M_SEARCH:
+      this._msearch(headers, msg, rinfo)
+      break
+    default:
+      this._logger(&#x27;Unhandled command: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseMessage" id="apidoc.element.node-ssdp.Base.prototype._parseMessage">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseMessage
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseMessage = function (msg, rinfo) {
+  msg = msg.toString()
+
+  var type = msg.split(&#x27;\r\n&#x27;).shift()
+
+  // HTTP/#.# ### Response to M-SEARCH
+  if (httpHeader.test(type)) {
+    this._parseResponse(msg, rinfo)
+  } else {
+    this._parseCommand(msg, rinfo)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseResponse" id="apidoc.element.node-ssdp.Base.prototype._parseResponse">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseResponse
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseResponse(msg, rinfo) {
+  this._logger(&#x27;SSDP response: %o&#x27;, {&#x27;message&#x27;: msg})
+
+  var headers = this._getHeaders(msg)
+    , statusCode = this._getStatusCode(msg)
+
+  this.emit(&#x27;response&#x27;, headers, statusCode, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch" id="apidoc.element.node-ssdp.Base.prototype._respondToSearch">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_respondToSearch
+        <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_respondToSearch = function (serviceType, rinfo) {
+  var self = this
+    , peer_addr = rinfo.address
+    , peer_port = rinfo.port
+    , stRegex
+    , acceptor
+
+  // unwrap quoted string
+  if (serviceType[0] == &#x27;&#x22;&#x27; &#x26;&#x26; serviceType[serviceType.length - 1] == &#x27;&#x22;&#x27;) {
+    serviceType = serviceType.slice(1, -1)
+  }
+
+  if (self._allowWildcards) {
+    stRegex = new RegExp(serviceType.replace(/\*/g, &#x27;.*&#x27;) + &#x27;$&#x27;)
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || stRegex.test(usn)
+    }
+  } else {
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || usn === serviceType
+    }
+  }
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+
+    if (self._allowWildcards) {
+      udn = udn.replace(stRegex, serviceType)
+    }
+
+    if (acceptor(usn, serviceType)) {
+      var pkt = self._getSSDPHeader(
+        &#x27;200 OK&#x27;, extend({
+          &#x27;ST&#x27;: serviceType === c.SSDP_ALL ? usn : serviceType,
+          &#x27;USN&#x27;: udn,
+          &#x27;LOCATION&#x27;: self._location,
+          &#x27;CACHE-CONTROL&#x27;: &#x27;max-age=&#x27; + self._ttl,
+          &#x27;DATE&#x27;: new Date().toUTCString(),
+          &#x27;SERVER&#x27;: self._ssdpSig,
+          &#x27;EXT&#x27;: &#x27;&#x27;
+        }, self._extraHeaders),
+        true
+      )
+
+      self._logger(&#x27;Sending a 200 OK for an M-SEARCH: %o&#x27;, {&#x27;peer&#x27;: peer_addr, &#x27;port&#x27;: peer_port})
+
+      var message = new Buffer(pkt)
+
+      self._send(message, peer_addr, peer_port, function (err, bytes) {
+        self._logger(&#x27;Sent M-SEARCH response: %o&#x27;, {&#x27;message&#x27;: pkt})
+      })
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._send" id="apidoc.element.node-ssdp.Base.prototype._send">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_send
+        <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_send = function (message, host, port, cb) {
+  var self = this
+
+  if (typeof host === &#x27;function&#x27;) {
+    cb = host
+    host = this._ssdpIp
+    port = this._ssdpPort
+  }
+
+  var ipAddresses = Object.keys(this.sockets)
+
+  async.each(ipAddresses, function (ipAddress, next) {
+    var socket = self.sockets[ipAddress]
+
+    socket.send(message, 0, message.length, port, host, next)
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._start" id="apidoc.element.node-ssdp.Base.prototype._start">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_start = function (cb) {
+  var self = this
+
+  if (self._started) {
+    self._logger(&#x27;Already started.&#x27;)
+    return
+  }
+
+  if (!this.sockets) {
+    this._createSockets()
+  }
+
+  self._started = true
+
+  var interfaces = Object.keys(this.sockets)
+
+  async.each(interfaces, function (iface, next) {
+    var socket = self.sockets[iface]
+
+    socket.on(&#x27;error&#x27;, function onSocketError(err) {
+      self._logger(&#x27;Socker error: %s&#x27;, err.message)
+    })
+
+    socket.on(&#x27;message&#x27;, function onSocketMessage(msg, rinfo) {
+      self._parseMessage(msg, rinfo)
+    })
+
+    socket.on(&#x27;listening&#x27;, function onSocketListening() {
+      var addr = socket.address()
+
+      self._logger(&#x27;SSDP listening: %o&#x27;, {address: &#x27;http://&#x27; + addr.address + &#x27;:&#x27; + addr.port, &#x27;interface&#x27;: iface})
+
+      try {
+        socket.addMembership(self._ssdpIp, iface) // TODO: specifying the interface in there might make a difference
+        socket.setMulticastTTL(self._ssdpTtl)
+      } catch (e) {
+        if (e.code === &#x27;ENODEV&#x27; || e.code === &#x27;EADDRNOTAVAIL&#x27;) {
+          self._logger(&#x27;Interface %s is not present to add multicast group membership. Scheduling a retry. Error: %s&#x27;, addr, e.message
+)
+          setTimeout(addMembership, 5000)
+        } else {
+          throw e
+        }
+      }
+    })
+
+    if (self._explicitSocketBind) {
+      socket.bind(self._sourcePort, iface, next)
+    } else {
+      socket.bind(self._sourcePort, next) // socket binds on 0.0.0.0
+    }
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._stop" id="apidoc.element.node-ssdp.Base.prototype._stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stop = function () {
+  var self = this
+
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  Object.keys(this.sockets).forEach(function (ipAddress) {
+    var socket = self.sockets[ipAddress]
+
+    socket &#x26;&#x26; socket.close()
+
+    self._logger(&#x27;Stopped socket on %s&#x27;, ipAddress)
+  })
+
+  this.sockets = null
+
+  this._socketBound = this._started = false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype.addUSN" id="apidoc.element.node-ssdp.Base.prototype.addUSN">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>addUSN
+        <span class="apidocSignatureSpan">(device)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addUSN = function (device) {
+  this._usns[device] = this._udn + &#x27;::&#x27; + device
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Usage - Server
+
+```javascript
+var Server = require(&#x27;node-ssdp&#x27;).Server
+  , server = new Server()
+;
+
+server.<span class="apidocCodeKeywordSpan">addUSN</span>(&#x27;upnp:rootdevice&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:device:MediaServer:1&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:service:ContentDirectory:1&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:service:ConnectionManager:1&#x27;);
+
+server.on(&#x27;advertise-alive&#x27;, function (headers) {
+  // Expire old devices from your cache.
+  // Register advertising device somewhere (as designated in http headers heads)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._createSockets" id="apidoc.module.node-ssdp.Base.prototype._createSockets">module node-ssdp.Base.prototype._createSockets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._createSockets._createSockets" id="apidoc.element.node-ssdp.Base.prototype._createSockets._createSockets">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_createSockets
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createSockets = function () {
+  var interfaces = os.networkInterfaces()
+    , self = this
+
+  this.sockets = {}
+
+  Object.keys(interfaces).forEach(function (iName) {
+    self._logger(&#x27;discovering all IPs from interface %s&#x27;, iName)
+
+    interfaces[iName].forEach(function (ipInfo) {
+      if (ipInfo.internal == false &#x26;&#x26; ipInfo.family == &#x22;IPv4&#x22;) {
+        self._logger(&#x27;Will use interface %s&#x27;, iName)
+        var socket
+
+        if (parseFloat(process.version.replace(/\w/, &#x27;&#x27;)) &#x3e;= 0.12) {
+          socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self._reuseAddr})
+        } else {
+          socket = dgram.createSocket(&#x27;udp4&#x27;)
+        }
+
+        if (socket) {
+          socket.unref()
+
+          self.sockets[ipInfo.address] = socket
+        }
+      }
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._getHeaders" id="apidoc.module.node-ssdp.Base.prototype._getHeaders">module node-ssdp.Base.prototype._getHeaders</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getHeaders._getHeaders" id="apidoc.element.node-ssdp.Base.prototype._getHeaders._getHeaders">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getHeaders
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getHeaders(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+
+  var headers = {}
+
+  lines.forEach(function (line) {
+    if (line.length) {
+      var pairs = line.match(ssdpHeader)
+      if (pairs) headers[pairs[1].toUpperCase()] = pairs[2] // e.g. {&#x27;HOST&#x27;: 239.255.255.250:1900}
+    }
+  })
+
+  return headers
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._getMethod" id="apidoc.module.node-ssdp.Base.prototype._getMethod">module node-ssdp.Base.prototype._getMethod</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getMethod._getMethod" id="apidoc.element.node-ssdp.Base.prototype._getMethod._getMethod">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getMethod
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getMethod(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , method = (type[0] || &#x27;&#x27;).toLowerCase()
+
+  return method
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._getSSDPHeader" id="apidoc.module.node-ssdp.Base.prototype._getSSDPHeader">module node-ssdp.Base.prototype._getSSDPHeader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getSSDPHeader._getSSDPHeader" id="apidoc.element.node-ssdp.Base.prototype._getSSDPHeader._getSSDPHeader">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getSSDPHeader
+        <span class="apidocSignatureSpan">(method, headers, isResponse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getSSDPHeader = function (method, headers, isResponse) {
+  var message = []
+
+  method = method.toUpperCase()
+
+  if (isResponse) {
+    message.push(&#x27;HTTP/1.1 &#x27; + method)
+  } else {
+    message.push(method + &#x27; * HTTP/1.1&#x27;)
+  }
+
+  Object.keys(headers).forEach(function (header) {
+    message.push(header + &#x27;: &#x27; + headers[header])
+  })
+
+  message.push(&#x27;\r\n&#x27;)
+
+  return message.join(&#x27;\r\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._getStatusCode" id="apidoc.module.node-ssdp.Base.prototype._getStatusCode">module node-ssdp.Base.prototype._getStatusCode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._getStatusCode._getStatusCode" id="apidoc.element.node-ssdp.Base.prototype._getStatusCode._getStatusCode">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_getStatusCode
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getStatusCode(msg) {
+  var lines = msg.split(&#x22;\r\n&#x22;)
+    , type = lines.shift().split(&#x27; &#x27;)// command, such as &#x22;NOTIFY * HTTP/1.1&#x22;
+    , code = parseInt(type[1], 10)
+
+  return code
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._init" id="apidoc.module.node-ssdp.Base.prototype._init">module node-ssdp.Base.prototype._init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._init._init" id="apidoc.element.node-ssdp.Base.prototype._init._init">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_init
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_init = function (opts) {
+  this._logger = opts.customLogger || debug(this._subclass)
+
+  this._ssdpSig = opts.ssdpSig || getSsdpSignature()
+
+  this._explicitSocketBind = opts.explicitSocketBind
+  this._reuseAddr = opts.reuseAddr === undefined ? true : opts.reuseAddr
+
+  // User shouldn&#x27;t need to set these
+  this._ssdpIp = opts.ssdpIp || c.SSDP_DEFAULT_IP
+  this._ssdpPort = opts.ssdpPort || c.SSDP_DEFAULT_PORT
+  this._ssdpTtl = opts.ssdpTtl || 4
+
+  // port on which to listen for messages
+  // this generally should be left up to the system
+  this._sourcePort = opts.sourcePort || 0
+
+  this._adInterval = opts.adInterval || 10000
+
+  this._ttl = opts.ttl || 1800
+
+  if (typeof opts.location === &#x27;function&#x27;) {
+    Object.defineProperty(this, &#x27;_location&#x27;, {
+      enumerable: true,
+      get: opts.location
+    })
+  } else {
+    // Probably should specify these
+    this._location = opts.location || &#x27;http://&#x27; + ip.address() + &#x27;:&#x27; + 10293 + &#x27;/upnp/desc.html&#x27;
+  }
+
+  this._ssdpServerHost = this._ssdpIp + &#x27;:&#x27; + this._ssdpPort
+
+  this._usns = {}
+  this._udn = opts.udn || &#x27;uuid:f40c2981-7329-40b7-8b04-27f187aecfb5&#x27;
+
+  this._extraHeaders = opts.headers || {}
+
+  this._allowWildcards = opts.allowWildcards
+
+  this._suppressRootDeviceAdvertisements = opts.suppressRootDeviceAdvertisements
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._msearch" id="apidoc.module.node-ssdp.Base.prototype._msearch">module node-ssdp.Base.prototype._msearch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._msearch._msearch" id="apidoc.element.node-ssdp.Base.prototype._msearch._msearch">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_msearch
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_msearch = function (headers, msg, rinfo) {
+  this._logger(&#x27;SSDP M-SEARCH event: %o&#x27;, {&#x27;ST&#x27;: headers.ST, &#x27;address&#x27;: rinfo.address, &#x27;port&#x27;: rinfo.port})
+
+  if (!headers.MAN || !headers.MX || !headers.ST) return
+
+  this._respondToSearch(headers.ST, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._notify" id="apidoc.module.node-ssdp.Base.prototype._notify">module node-ssdp.Base.prototype._notify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._notify._notify" id="apidoc.element.node-ssdp.Base.prototype._notify._notify">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_notify
+        <span class="apidocSignatureSpan">(headers, msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_notify = function (headers, msg, rinfo) {
+  if (!headers.NTS) {
+    this._logger(&#x27;Missing NTS header: %o&#x27;, headers)
+    return
+  }
+
+  switch (headers.NTS.toLowerCase()) {
+    // Device coming to life.
+
+    case c.SSDP_ALIVE:
+      this.emit(c.ADVERTISE_ALIVE, headers, rinfo)
+      break
+
+    // Device shutting down.
+    case c.SSDP_BYE:
+      this.emit(c.ADVERTISE_BYE, headers, rinfo)
+      break
+
+    default:
+      this._logger(&#x27;Unhandled NOTIFY event: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._parseCommand" id="apidoc.module.node-ssdp.Base.prototype._parseCommand">module node-ssdp.Base.prototype._parseCommand</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseCommand._parseCommand" id="apidoc.element.node-ssdp.Base.prototype._parseCommand._parseCommand">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseCommand
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseCommand(msg, rinfo) {
+  var method = this._getMethod(msg)
+    , headers = this._getHeaders(msg)
+
+  switch (method) {
+    case c.NOTIFY:
+      this._notify(headers, msg, rinfo)
+      break
+    case c.M_SEARCH:
+      this._msearch(headers, msg, rinfo)
+      break
+    default:
+      this._logger(&#x27;Unhandled command: %o&#x27;, {&#x27;message&#x27;: msg, &#x27;rinfo&#x27;: rinfo})
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._parseMessage" id="apidoc.module.node-ssdp.Base.prototype._parseMessage">module node-ssdp.Base.prototype._parseMessage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseMessage._parseMessage" id="apidoc.element.node-ssdp.Base.prototype._parseMessage._parseMessage">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseMessage
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseMessage = function (msg, rinfo) {
+  msg = msg.toString()
+
+  var type = msg.split(&#x27;\r\n&#x27;).shift()
+
+  // HTTP/#.# ### Response to M-SEARCH
+  if (httpHeader.test(type)) {
+    this._parseResponse(msg, rinfo)
+  } else {
+    this._parseCommand(msg, rinfo)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._parseResponse" id="apidoc.module.node-ssdp.Base.prototype._parseResponse">module node-ssdp.Base.prototype._parseResponse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._parseResponse._parseResponse" id="apidoc.element.node-ssdp.Base.prototype._parseResponse._parseResponse">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_parseResponse
+        <span class="apidocSignatureSpan">(msg, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseResponse(msg, rinfo) {
+  this._logger(&#x27;SSDP response: %o&#x27;, {&#x27;message&#x27;: msg})
+
+  var headers = this._getHeaders(msg)
+    , statusCode = this._getStatusCode(msg)
+
+  this.emit(&#x27;response&#x27;, headers, statusCode, rinfo)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._respondToSearch" id="apidoc.module.node-ssdp.Base.prototype._respondToSearch">module node-ssdp.Base.prototype._respondToSearch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._respondToSearch._respondToSearch" id="apidoc.element.node-ssdp.Base.prototype._respondToSearch._respondToSearch">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_respondToSearch
+        <span class="apidocSignatureSpan">(serviceType, rinfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_respondToSearch = function (serviceType, rinfo) {
+  var self = this
+    , peer_addr = rinfo.address
+    , peer_port = rinfo.port
+    , stRegex
+    , acceptor
+
+  // unwrap quoted string
+  if (serviceType[0] == &#x27;&#x22;&#x27; &#x26;&#x26; serviceType[serviceType.length - 1] == &#x27;&#x22;&#x27;) {
+    serviceType = serviceType.slice(1, -1)
+  }
+
+  if (self._allowWildcards) {
+    stRegex = new RegExp(serviceType.replace(/\*/g, &#x27;.*&#x27;) + &#x27;$&#x27;)
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || stRegex.test(usn)
+    }
+  } else {
+    acceptor = function (usn, serviceType) {
+      return serviceType === c.SSDP_ALL || usn === serviceType
+    }
+  }
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+
+    if (self._allowWildcards) {
+      udn = udn.replace(stRegex, serviceType)
+    }
+
+    if (acceptor(usn, serviceType)) {
+      var pkt = self._getSSDPHeader(
+        &#x27;200 OK&#x27;, extend({
+          &#x27;ST&#x27;: serviceType === c.SSDP_ALL ? usn : serviceType,
+          &#x27;USN&#x27;: udn,
+          &#x27;LOCATION&#x27;: self._location,
+          &#x27;CACHE-CONTROL&#x27;: &#x27;max-age=&#x27; + self._ttl,
+          &#x27;DATE&#x27;: new Date().toUTCString(),
+          &#x27;SERVER&#x27;: self._ssdpSig,
+          &#x27;EXT&#x27;: &#x27;&#x27;
+        }, self._extraHeaders),
+        true
+      )
+
+      self._logger(&#x27;Sending a 200 OK for an M-SEARCH: %o&#x27;, {&#x27;peer&#x27;: peer_addr, &#x27;port&#x27;: peer_port})
+
+      var message = new Buffer(pkt)
+
+      self._send(message, peer_addr, peer_port, function (err, bytes) {
+        self._logger(&#x27;Sent M-SEARCH response: %o&#x27;, {&#x27;message&#x27;: pkt})
+      })
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._send" id="apidoc.module.node-ssdp.Base.prototype._send">module node-ssdp.Base.prototype._send</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._send._send" id="apidoc.element.node-ssdp.Base.prototype._send._send">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_send
+        <span class="apidocSignatureSpan">(message, host, port, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_send = function (message, host, port, cb) {
+  var self = this
+
+  if (typeof host === &#x27;function&#x27;) {
+    cb = host
+    host = this._ssdpIp
+    port = this._ssdpPort
+  }
+
+  var ipAddresses = Object.keys(this.sockets)
+
+  async.each(ipAddresses, function (ipAddress, next) {
+    var socket = self.sockets[ipAddress]
+
+    socket.send(message, 0, message.length, port, host, next)
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._start" id="apidoc.module.node-ssdp.Base.prototype._start">module node-ssdp.Base.prototype._start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._start._start" id="apidoc.element.node-ssdp.Base.prototype._start._start">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_start = function (cb) {
+  var self = this
+
+  if (self._started) {
+    self._logger(&#x27;Already started.&#x27;)
+    return
+  }
+
+  if (!this.sockets) {
+    this._createSockets()
+  }
+
+  self._started = true
+
+  var interfaces = Object.keys(this.sockets)
+
+  async.each(interfaces, function (iface, next) {
+    var socket = self.sockets[iface]
+
+    socket.on(&#x27;error&#x27;, function onSocketError(err) {
+      self._logger(&#x27;Socker error: %s&#x27;, err.message)
+    })
+
+    socket.on(&#x27;message&#x27;, function onSocketMessage(msg, rinfo) {
+      self._parseMessage(msg, rinfo)
+    })
+
+    socket.on(&#x27;listening&#x27;, function onSocketListening() {
+      var addr = socket.address()
+
+      self._logger(&#x27;SSDP listening: %o&#x27;, {address: &#x27;http://&#x27; + addr.address + &#x27;:&#x27; + addr.port, &#x27;interface&#x27;: iface})
+
+      try {
+        socket.addMembership(self._ssdpIp, iface) // TODO: specifying the interface in there might make a difference
+        socket.setMulticastTTL(self._ssdpTtl)
+      } catch (e) {
+        if (e.code === &#x27;ENODEV&#x27; || e.code === &#x27;EADDRNOTAVAIL&#x27;) {
+          self._logger(&#x27;Interface %s is not present to add multicast group membership. Scheduling a retry. Error: %s&#x27;, addr, e.message
+)
+          setTimeout(addMembership, 5000)
+        } else {
+          throw e
+        }
+      }
+    })
+
+    if (self._explicitSocketBind) {
+      socket.bind(self._sourcePort, iface, next)
+    } else {
+      socket.bind(self._sourcePort, next) // socket binds on 0.0.0.0
+    }
+  }, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype._stop" id="apidoc.module.node-ssdp.Base.prototype._stop">module node-ssdp.Base.prototype._stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype._stop._stop" id="apidoc.element.node-ssdp.Base.prototype._stop._stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>_stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stop = function () {
+  var self = this
+
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  Object.keys(this.sockets).forEach(function (ipAddress) {
+    var socket = self.sockets[ipAddress]
+
+    socket &#x26;&#x26; socket.close()
+
+    self._logger(&#x27;Stopped socket on %s&#x27;, ipAddress)
+  })
+
+  this.sockets = null
+
+  this._socketBound = this._started = false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Base.prototype.addUSN" id="apidoc.module.node-ssdp.Base.prototype.addUSN">module node-ssdp.Base.prototype.addUSN</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Base.prototype.addUSN.addUSN" id="apidoc.element.node-ssdp.Base.prototype.addUSN.addUSN">
+        function <span class="apidocSignatureSpan">node-ssdp.Base.prototype.</span>addUSN
+        <span class="apidocSignatureSpan">(device)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addUSN = function (device) {
+  this._usns[device] = this._udn + &#x27;::&#x27; + device
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Usage - Server
+
+```javascript
+var Server = require(&#x27;node-ssdp&#x27;).Server
+  , server = new Server()
+;
+
+server.<span class="apidocCodeKeywordSpan">addUSN</span>(&#x27;upnp:rootdevice&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:device:MediaServer:1&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:service:ContentDirectory:1&#x27;);
+server.addUSN(&#x27;urn:schemas-upnp-org:service:ConnectionManager:1&#x27;);
+
+server.on(&#x27;advertise-alive&#x27;, function (headers) {
+  // Expire old devices from your cache.
+  // Register advertising device somewhere (as designated in http headers heads)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Client" id="apidoc.module.node-ssdp.Client">module node-ssdp.Client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.Client" id="apidoc.element.node-ssdp.Client.Client">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SsdpClient(opts) {
+  this._subclass = &#x27;ssdp-client&#x27;
+  SSDP.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.super_" id="apidoc.element.node-ssdp.Client.super_">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.</span>super_
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SSDP(opts) {
+  var self = this
+
+  if (!(this instanceof SSDP)) return new SSDP(opts)
+
+  this._subclass = this._subclass || &#x27;ssdp-base&#x27;
+
+  opts = opts || {}
+
+  EE.call(self)
+
+  this._init(opts)
+
+  this._createSockets()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Client.prototype" id="apidoc.module.node-ssdp.Client.prototype">module node-ssdp.Client.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.search" id="apidoc.element.node-ssdp.Client.prototype.search">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>search
+        <span class="apidocSignatureSpan">(serviceType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function search(serviceType) {
+  var self = this
+
+  if (!this._started) {
+    return this.start(function () {
+      self.search(serviceType)
+    })
+  }
+
+  var pkt = self._getSSDPHeader(
+    c.M_SEARCH,
+    {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;ST&#x27;: serviceType,
+      &#x27;MAN&#x27;: &#x27;&#x22;ssdp:discover&#x22;&#x27;,
+      &#x27;MX&#x27;: 3
+    }
+  )
+
+  self._logger(&#x27;Sending an M-SEARCH request&#x27;)
+
+  var message = new Buffer(pkt)
+
+  self._send(message, function (err, bytes) {
+    self._logger(&#x27;Sent M-SEARCH request: %o&#x27;, {&#x27;message&#x27;: pkt})
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      , client = new Client();
+
+    client.on(&#x27;response&#x27;, function (headers, statusCode, rinfo) {
+      console.log(&#x27;Got a response to an m-search.&#x27;);
+    });
+
+    // search for a service type
+    client.<span class="apidocCodeKeywordSpan">search</span>(&#x27;urn:schemas-upnp-org:service:ContentDirectory:1&#x27;);
+
+    // Or get a list of all services on the network
+
+    client.search(&#x27;ssdp:all&#x27;);
+```
+
+## Usage - Server
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.start" id="apidoc.element.node-ssdp.Client.prototype.start">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (cb) {
+  var self = this;
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    server.on(&#x27;advertise-bye&#x27;, function (headers) {
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.<span class="apidocCodeKeywordSpan">start</span>();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.stop() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.stop" id="apidoc.element.node-ssdp.Client.prototype.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.start();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.<span class="apidocCodeKeywordSpan">stop</span>() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+
+##Configuration
+`new SSDP([options, [socket]])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Client.prototype.search" id="apidoc.module.node-ssdp.Client.prototype.search">module node-ssdp.Client.prototype.search</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.search.search" id="apidoc.element.node-ssdp.Client.prototype.search.search">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>search
+        <span class="apidocSignatureSpan">(serviceType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function search(serviceType) {
+  var self = this
+
+  if (!this._started) {
+    return this.start(function () {
+      self.search(serviceType)
+    })
+  }
+
+  var pkt = self._getSSDPHeader(
+    c.M_SEARCH,
+    {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;ST&#x27;: serviceType,
+      &#x27;MAN&#x27;: &#x27;&#x22;ssdp:discover&#x22;&#x27;,
+      &#x27;MX&#x27;: 3
+    }
+  )
+
+  self._logger(&#x27;Sending an M-SEARCH request&#x27;)
+
+  var message = new Buffer(pkt)
+
+  self._send(message, function (err, bytes) {
+    self._logger(&#x27;Sent M-SEARCH request: %o&#x27;, {&#x27;message&#x27;: pkt})
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      , client = new Client();
+
+    client.on(&#x27;response&#x27;, function (headers, statusCode, rinfo) {
+      console.log(&#x27;Got a response to an m-search.&#x27;);
+    });
+
+    // search for a service type
+    client.<span class="apidocCodeKeywordSpan">search</span>(&#x27;urn:schemas-upnp-org:service:ContentDirectory:1&#x27;);
+
+    // Or get a list of all services on the network
+
+    client.search(&#x27;ssdp:all&#x27;);
+```
+
+## Usage - Server
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Client.prototype.start" id="apidoc.module.node-ssdp.Client.prototype.start">module node-ssdp.Client.prototype.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.start.start" id="apidoc.element.node-ssdp.Client.prototype.start.start">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (cb) {
+  var self = this;
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    server.on(&#x27;advertise-bye&#x27;, function (headers) {
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.<span class="apidocCodeKeywordSpan">start</span>();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.stop() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Client.prototype.stop" id="apidoc.module.node-ssdp.Client.prototype.stop">module node-ssdp.Client.prototype.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Client.prototype.stop.stop" id="apidoc.element.node-ssdp.Client.prototype.stop.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Client.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.start();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.<span class="apidocCodeKeywordSpan">stop</span>() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+
+##Configuration
+`new SSDP([options, [socket]])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server" id="apidoc.module.node-ssdp.Server">module node-ssdp.Server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.Server" id="apidoc.element.node-ssdp.Server.Server">
+        function <span class="apidocSignatureSpan">node-ssdp.</span>Server
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SsdpServer(opts) {
+  this._subclass = &#x27;node-ssdp:server&#x27;
+  SSDP.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.super_" id="apidoc.element.node-ssdp.Server.super_">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.</span>super_
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SSDP(opts) {
+  var self = this
+
+  if (!(this instanceof SSDP)) return new SSDP(opts)
+
+  this._subclass = this._subclass || &#x27;ssdp-base&#x27;
+
+  opts = opts || {}
+
+  EE.call(self)
+
+  this._init(opts)
+
+  this._createSockets()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype" id="apidoc.module.node-ssdp.Server.prototype">module node-ssdp.Server.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop" id="apidoc.element.node-ssdp.Server.prototype._initAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_initAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initAdLoop = function () {
+  var self = this
+
+  // Wake up.
+  setTimeout(self.advertise.bind(self), 3000)
+
+  self._startAdLoop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop" id="apidoc.element.node-ssdp.Server.prototype._startAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_startAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startAdLoop = function () {
+  assert.equal(this._adLoopInterval, null, &#x27;Attempting to start a parallel ad loop&#x27;)
+
+  this._adLoopInterval = setInterval(this.advertise.bind(this), this._adInterval)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop" id="apidoc.element.node-ssdp.Server.prototype._stopAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_stopAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stopAdLoop = function () {
+  assert.notEqual(this._adLoopInterval, null, &#x27;Attempting to clear a non-existing interval&#x27;)
+
+  clearInterval(this._adLoopInterval)
+  this._adLoopInterval = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.advertise" id="apidoc.element.node-ssdp.Server.prototype.advertise">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>advertise
+        <span class="apidocSignatureSpan">(alive)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">advertise = function (alive) {
+  var self = this
+
+  if (!this.sockets) return
+  if (alive === undefined) alive = true
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+      , nts = alive ? c.SSDP_ALIVE : c.SSDP_BYE // notification sub-type
+
+    var heads = {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;NT&#x27;: usn, // notification type, in this case same as ST
+      &#x27;NTS&#x27;: nts,
+      &#x27;USN&#x27;: udn
+    }
+
+    if (alive) {
+      heads.LOCATION = self._location
+      heads[&#x27;CACHE-CONTROL&#x27;] = &#x27;max-age=1800&#x27;
+      heads.SERVER = self._ssdpSig // why not include this?
+    }
+
+    extend(heads, self._extraHeaders);
+
+    self._logger(&#x27;Sending an advertisement event&#x27;)
+
+    var message = self._getSSDPHeader(c.NOTIFY, heads)
+
+    self._send(new Buffer(message), function (err, bytes) {
+      self._logger(&#x27;Outgoing server message: %o&#x27;, {&#x27;message&#x27;: message})
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.start" id="apidoc.element.node-ssdp.Server.prototype.start">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (cb) {
+  var self = this
+
+  if (self._socketBound) {
+    self._logger(&#x27;Server already running.&#x27;)
+    return
+  }
+
+  self._socketBound = true
+
+  if (!self._suppressRootDeviceAdvertisements) {
+    this._usns[this._udn] = this._udn
+  }
+
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      self._initAdLoop.apply(self, arguments)
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    server.on(&#x27;advertise-bye&#x27;, function (headers) {
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.<span class="apidocCodeKeywordSpan">start</span>();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.stop() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.stop" id="apidoc.element.node-ssdp.Server.prototype.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  this.advertise(false)
+
+  this._stopAdLoop()
+
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.start();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.<span class="apidocCodeKeywordSpan">stop</span>() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+
+##Configuration
+`new SSDP([options, [socket]])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype._initAdLoop" id="apidoc.module.node-ssdp.Server.prototype._initAdLoop">module node-ssdp.Server.prototype._initAdLoop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._initAdLoop._initAdLoop" id="apidoc.element.node-ssdp.Server.prototype._initAdLoop._initAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_initAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initAdLoop = function () {
+  var self = this
+
+  // Wake up.
+  setTimeout(self.advertise.bind(self), 3000)
+
+  self._startAdLoop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype._startAdLoop" id="apidoc.module.node-ssdp.Server.prototype._startAdLoop">module node-ssdp.Server.prototype._startAdLoop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._startAdLoop._startAdLoop" id="apidoc.element.node-ssdp.Server.prototype._startAdLoop._startAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_startAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startAdLoop = function () {
+  assert.equal(this._adLoopInterval, null, &#x27;Attempting to start a parallel ad loop&#x27;)
+
+  this._adLoopInterval = setInterval(this.advertise.bind(this), this._adInterval)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype._stopAdLoop" id="apidoc.module.node-ssdp.Server.prototype._stopAdLoop">module node-ssdp.Server.prototype._stopAdLoop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype._stopAdLoop._stopAdLoop" id="apidoc.element.node-ssdp.Server.prototype._stopAdLoop._stopAdLoop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>_stopAdLoop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stopAdLoop = function () {
+  assert.notEqual(this._adLoopInterval, null, &#x27;Attempting to clear a non-existing interval&#x27;)
+
+  clearInterval(this._adLoopInterval)
+  this._adLoopInterval = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype.advertise" id="apidoc.module.node-ssdp.Server.prototype.advertise">module node-ssdp.Server.prototype.advertise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.advertise.advertise" id="apidoc.element.node-ssdp.Server.prototype.advertise.advertise">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>advertise
+        <span class="apidocSignatureSpan">(alive)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">advertise = function (alive) {
+  var self = this
+
+  if (!this.sockets) return
+  if (alive === undefined) alive = true
+
+  Object.keys(self._usns).forEach(function (usn) {
+    var udn = self._usns[usn]
+      , nts = alive ? c.SSDP_ALIVE : c.SSDP_BYE // notification sub-type
+
+    var heads = {
+      &#x27;HOST&#x27;: self._ssdpServerHost,
+      &#x27;NT&#x27;: usn, // notification type, in this case same as ST
+      &#x27;NTS&#x27;: nts,
+      &#x27;USN&#x27;: udn
+    }
+
+    if (alive) {
+      heads.LOCATION = self._location
+      heads[&#x27;CACHE-CONTROL&#x27;] = &#x27;max-age=1800&#x27;
+      heads.SERVER = self._ssdpSig // why not include this?
+    }
+
+    extend(heads, self._extraHeaders);
+
+    self._logger(&#x27;Sending an advertisement event&#x27;)
+
+    var message = self._getSSDPHeader(c.NOTIFY, heads)
+
+    self._send(new Buffer(message), function (err, bytes) {
+      self._logger(&#x27;Outgoing server message: %o&#x27;, {&#x27;message&#x27;: message})
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype.start" id="apidoc.module.node-ssdp.Server.prototype.start">module node-ssdp.Server.prototype.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.start.start" id="apidoc.element.node-ssdp.Server.prototype.start.start">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (cb) {
+  var self = this
+
+  if (self._socketBound) {
+    self._logger(&#x27;Server already running.&#x27;)
+    return
+  }
+
+  self._socketBound = true
+
+  if (!self._suppressRootDeviceAdvertisements) {
+    this._usns[this._udn] = this._udn
+  }
+
+  return new Promise(function(success, failure) {
+    function onBind(err) {
+      self._initAdLoop.apply(self, arguments)
+      if (cb) cb.apply(self, arguments)
+      if (err) return failure(err)
+      success()
+    }
+    self._start(onBind)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    server.on(&#x27;advertise-bye&#x27;, function (headers) {
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.<span class="apidocCodeKeywordSpan">start</span>();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.stop() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-ssdp.Server.prototype.stop" id="apidoc.module.node-ssdp.Server.prototype.stop">module node-ssdp.Server.prototype.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-ssdp.Server.prototype.stop.stop" id="apidoc.element.node-ssdp.Server.prototype.stop.stop">
+        function <span class="apidocSignatureSpan">node-ssdp.Server.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  if (!this.sockets) {
+    this._logger(&#x27;Already stopped.&#x27;)
+    return
+  }
+
+  this.advertise(false)
+
+  this._stopAdLoop()
+
+  this._stop()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // Remove specified device from cache.
+    });
+
+    // start the server
+    server.start();
+
+    process.on(&#x27;exit&#x27;, function(){
+      server.<span class="apidocCodeKeywordSpan">stop</span>() // advertise shutting down and stop listening
+    })
+```
+
+Take a look at `example` directory as well to see examples or client and server.
+
+##Configuration
+`new SSDP([options, [socket]])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
