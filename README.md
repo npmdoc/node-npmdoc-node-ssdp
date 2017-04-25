@@ -1,4 +1,7 @@
-# api documentation for  [node-ssdp (v3.2.1)](https://github.com/diversario/node-ssdp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-ssdp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-ssdp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-ssdp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-ssdp)
+# npmdoc-node-ssdp
+
+#### basic api documentation for  [node-ssdp (v3.2.1)](https://github.com/diversario/node-ssdp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-ssdp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-ssdp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-ssdp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-ssdp)
+
 #### A node.js SSDP client and server library.
 
 [![NPM](https://nodei.co/npm/node-ssdp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-ssdp)
@@ -76,7 +79,8 @@
         "coverage": "istanbul cover node_modules/.bin/_mocha -- test/lib --recursive",
         "test": "mocha --recursive test"
     },
-    "version": "3.2.1"
+    "version": "3.2.1",
+    "bin": {}
 }
 ```
 
